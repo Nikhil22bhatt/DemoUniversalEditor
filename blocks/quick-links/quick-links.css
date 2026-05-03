@@ -45,11 +45,21 @@
 }
 
 .quick-links-icon {
-  display: block;
-  width: 36px;
-  height: 36px;
-  background-color: rgb(255 255 255 / 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgb(255 255 255 / 20%);
   border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.quick-links-icon svg {
+  width: 26px;
+  height: 26px;
+  color: #fff;
+  stroke: #fff;
 }
 
 .quick-links-label {
@@ -72,8 +82,13 @@
   }
 
   .quick-links-icon {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .quick-links-icon svg {
+    width: 28px;
+    height: 28px;
   }
 }
 

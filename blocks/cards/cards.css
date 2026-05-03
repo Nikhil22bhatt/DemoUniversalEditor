@@ -1,3 +1,105 @@
+/* ── carousel wrapper ── */
+.cards-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.cards-track {
+  overflow: hidden;
+}
+
+.cards-track > ul {
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+  gap: 0;
+}
+
+.cards-track > ul > li {
+  flex: 0 0 calc(100% / 1);
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+@media (width >= 600px) {
+  .cards-track > ul > li {
+    flex: 0 0 calc(100% / 2);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-track > ul > li {
+    flex: 0 0 calc(100% / 3);
+  }
+}
+
+/* nav buttons */
+.cards-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
+  transition: background-color 0.2s, color 0.2s;
+  font-size: inherit;
+  font-family: inherit;
+  text-overflow: initial;
+  white-space: initial;
+  overflow: initial;
+  max-width: unset;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.cards-nav:hover {
+  background-color: var(--link-color);
+  color: #fff;
+}
+
+.cards-nav:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.cards-nav svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.cards-prev {
+  left: -20px;
+}
+
+.cards-next {
+  right: -20px;
+}
+
+@media (width >= 900px) {
+  .cards-prev {
+    left: -20px;
+  }
+
+  .cards-next {
+    right: -20px;
+  }
+}
+
+/* ── grid (non-carousel) ── */
 .cards > ul {
   list-style: none;
   margin: 0;
