@@ -1,0 +1,145 @@
+.cards-carousel {
+  position: relative;
+  padding: 0 48px;
+  box-sizing: border-box;
+}
+
+.carousel-track {
+  overflow: hidden;
+}
+
+.carousel-track > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+
+.carousel-track > ul > li {
+  flex: 0 0 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+  background: var(--background-color);
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 7%);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width >= 600px) {
+  .carousel-track > ul > li {
+    flex: 0 0 50%;
+  }
+}
+
+@media (width >= 900px) {
+  .carousel-track > ul > li {
+    flex: 0 0 33.333%;
+  }
+}
+
+/* card internals */
+.cards-carousel .cards-card-image {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.cards-carousel .cards-card-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.cards-carousel .cards-card-body {
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cards-carousel .cards-card-body > p:first-child strong {
+  display: block;
+  color: var(--heading-color);
+  font-size: var(--body-font-size-s);
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: var(--heading-font-family);
+}
+
+.cards-carousel .cards-card-body p {
+  font-size: var(--body-font-size-xs);
+  color: var(--dark-color);
+  margin: 0 0 6px;
+  line-height: 1.5;
+}
+
+.cards-carousel .cards-card-body a {
+  color: var(--link-color);
+  font-size: var(--body-font-size-xs);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cards-carousel .cards-card-body a:hover {
+  text-decoration: underline;
+}
+
+/* nav arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 12%);
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  font-size: inherit;
+  font-family: inherit;
+  text-overflow: initial;
+  white-space: initial;
+  overflow: initial;
+  max-width: unset;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.carousel-nav:hover {
+  background-color: var(--link-color);
+  border-color: var(--link-color);
+  color: #fff;
+}
+
+.carousel-nav:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.carousel-nav svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.carousel-prev {
+  left: 4px;
+}
+
+.carousel-next {
+  right: 4px;
+}
