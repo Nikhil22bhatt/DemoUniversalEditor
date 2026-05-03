@@ -111,6 +111,7 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: var(--heading-color);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -175,10 +176,10 @@ button {
   margin: 12px 0;
   border: 2px solid transparent;
   border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  padding: 0.5em 1.4em;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
@@ -188,6 +189,7 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: background-color 0.2s;
 }
 
 a.button:hover,
@@ -255,4 +257,80 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+/* centered section headings */
+main .section > .default-content-wrapper h2,
+main .section > .default-content-wrapper h3 {
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 24px;
+}
+
+/* CTA bar section */
+main .section.cta {
+  background-color: #fff;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+main .section.cta > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+main .section.cta .default-content-wrapper p {
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+main .section.cta a {
+  display: inline-block;
+  padding: 10px 24px;
+  border-radius: 24px;
+  background-color: var(--link-color);
+  color: #fff;
+  font-weight: 600;
+  font-size: var(--body-font-size-xs);
+  text-decoration: none;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+main .section.cta a:hover {
+  background-color: var(--link-hover-color);
+  text-decoration: none;
+}
+
+/* disclaimer text */
+main .section.cta .default-content-wrapper > p + p {
+  font-size: 12px;
+  color: #888;
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* Quick Links section */
+main .section.quick-links-section {
+  background-color: var(--light-color);
+  margin: 0;
+  padding: 48px 0;
+}
+
+/* ESG section */
+main .section.esg {
+  background-color: #fff8f8;
+  margin: 0;
+  padding: 48px 0;
+  border-top: 1px solid #fde8e8;
+}
+
+/* section dividers */
+main > .section + .section {
+  margin-top: 0;
 }
