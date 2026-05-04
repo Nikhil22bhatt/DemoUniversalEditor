@@ -4,7 +4,7 @@
 }
 
 .quick-links-container {
-  background-color: var(--background-color);
+  background-color: transparent;
 }
 
 .quick-links > ul {

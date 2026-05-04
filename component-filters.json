@@ -14,8 +14,11 @@
       "title",
       "hero",
       "cards",
+      "cards-carousel",
       "columns",
-      "fragment"
+      "fragment",
+      "quick-links",
+      "esg"
     ]
   },
   {
@@ -37,6 +40,18 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "quick-links",
+    "components": [
+      "quick-links-item"
+    ]
+  },
+  {
+    "id": "esg",
+    "components": [
+      "esg-item"
     ]
   }
 ]
